@@ -4,293 +4,237 @@ import Layout from "../../../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import ScrollReveal from "../../../../components/ScrollReveal";
 
-const title = "Opiniones Portátiles MSI: Análisis de Fiabilidad y Rendimiento | Opiniones Electrónicas";
-const description = "Análisis editorial independiente sobre portátiles MSI. Desglosamos su rendimiento, problemas de bisagras, refrigeración y servicio técnico.";
+const title =
+  "Opiniones Portátiles MSI: fiabilidad, rendimiento y experiencia real | Opiniones Electrónicas";
+
+const description =
+  "Análisis editorial independiente sobre los portátiles MSI. Rendimiento, temperaturas, bisagras y servicio técnico según las opiniones reales de los usuarios.";
 ---
 
 <Layout title={title} description={description}>
   <!-- BREADCRUMBS -->
-  <nav class="bg-white border-b border-gray-100" aria-label="Breadcrumb">
-    <div class="max-w-4xl mx-auto px-4 py-3 text-xs text-gray-500 flex items-center gap-2">
+  <nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+    <div class="max-w-5xl mx-auto px-4 py-3 text-sm text-gray-500 flex items-center gap-2 overflow-x-auto whitespace-nowrap">
       <a href="/" class="hover:text-black transition-colors">Inicio</a>
       <Icon name="tabler:chevron-right" class="w-3 h-3" />
       <span>Opiniones</span>
       <Icon name="tabler:chevron-right" class="w-3 h-3" />
       <span>Portátiles</span>
       <Icon name="tabler:chevron-right" class="w-3 h-3" />
-      <span class="font-bold text-black">MSI</span>
+      <span class="font-semibold text-black">MSI</span>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto px-4 py-12">
-    
-    <!-- 1️⃣ CABECERA EDITORIAL -->
-    <header class="mb-12">
-      <ScrollReveal client:load>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black text-white text-xs font-bold tracking-wide uppercase mb-6">
-          <Icon name="tabler:device-laptop" class="w-4 h-4" />
-          Análisis de Marca
-        </span>
-        <h1 class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4">
-          Opiniones sobre Portátiles MSI: Rendimiento, fiabilidad y experiencia real
-        </h1>
-        <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mb-8">
-          ¿Vale la pena sacrificar acabados por potencia pura? Analizamos la realidad detrás del dragón rojo y por qué genera opiniones tan polarizadas.
-        </p>
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <!-- CABECERA -->
+    <header class="mb-16">
+      <span class="inline-block mb-4 px-3 py-1 rounded-full bg-red-100 text-red-800 text-xs font-semibold uppercase tracking-wide">
+        Análisis editorial
+      </span>
 
-        <!-- Resumen Ejecutivo (3 Bullets) -->
-        <div class="bg-gray-50 border-l-4 border-black p-6 rounded-r-xl">
-          <ul class="space-y-3 text-sm md:text-base font-medium text-gray-800">
-            <li class="flex items-start gap-3">
-              <Icon name="tabler:target" class="w-5 h-5 mt-0.5 text-black" />
-              <span><strong>Para quién es:</strong> Gamers y usuarios que priorizan FPS y potencia bruta sobre portabilidad o diseño premium.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <Icon name="tabler:thumb-up" class="w-5 h-5 mt-0.5 text-black" />
-              <span><strong>Dónde destaca:</strong> Relación rendimiento/precio y sistemas de refrigeración agresivos.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <Icon name="tabler:thumb-down" class="w-5 h-5 mt-0.5 text-black" />
-              <span><strong>Dónde falla:</strong> Calidad de materiales en gamas medias (bisagras, plásticos) y ruido elevado.</span>
-            </li>
-          </ul>
-        </div>
-      </ScrollReveal>
+      <h1 class="text-3xl md:text-5xl font-bold tracking-tight text-gray-900 mb-6">
+        Opiniones sobre los portátiles MSI
+      </h1>
+
+      <p class="text-xl text-gray-600 leading-relaxed max-w-3xl">
+        Rendimiento, fiabilidad y experiencia real de uso según las opiniones de los usuarios.
+        MSI es una marca que genera defensores y detractores a partes iguales, especialmente en el
+        segmento gaming y de alto rendimiento.
+      </p>
     </header>
 
-    <!-- 2️⃣ RESUMEN RÁPIDO (SCORECARD) -->
-    <section class="mb-16">
+    <!-- RESUMEN RÁPIDO -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      <div class="md:col-span-2 bg-gray-50 border border-gray-200 rounded-2xl p-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">
+          Resumen rápido de opinión
+        </h2>
+
+        <ul class="space-y-3 text-gray-700">
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-0.5" />
+            Rendimiento muy alto para su rango de precio, especialmente en gaming
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-0.5" />
+            Configuraciones de CPU y GPU menos limitadas que en otras marcas
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:x" class="w-5 h-5 text-red-600 mt-0.5" />
+            Compromisos claros en construcción y ruido en gamas medias
+          </li>
+          <li class="flex gap-2">
+            <Icon name="tabler:x" class="w-5 h-5 text-red-600 mt-0.5" />
+            Servicio técnico con valoraciones muy dispares según el distribuidor
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-white border border-gray-200 rounded-2xl p-8 text-center shadow-sm">
+        <div class="text-5xl font-black text-gray-900 mb-1">
+          7.9<span class="text-lg text-gray-400 font-normal">/10</span>
+        </div>
+        <div class="text-xs uppercase tracking-wider text-gray-500 font-semibold">
+          Valoración global
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <article class="space-y-24">
+      <ScrollReveal client:load>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Qué tipo de portátiles fabrica MSI
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            MSI no actúa como un fabricante generalista. Su catálogo de portátiles está claramente
+            orientado al alto rendimiento, priorizando CPU y GPU frente a autonomía, silencio o
+            ligereza. Esto explica por qué la mayoría de opiniones provienen de usuarios gaming,
+            creadores de contenido o perfiles técnicos avanzados.
+          </p>
+        </section>
+      </ScrollReveal>
+
       <ScrollReveal client:load delay={0.1}>
-        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
-          <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
-            
-            <!-- Nota -->
-            <div class="p-8 text-center flex flex-col justify-center bg-gray-50">
-              <div class="text-6xl font-black text-gray-900 mb-2">7.9</div>
-              <div class="text-xs font-bold uppercase text-gray-500 tracking-wider">Nota Editorial</div>
-              <p class="text-xs text-gray-400 mt-2 italic">Basada en hardware vs. construcción</p>
-            </div>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Rendimiento y potencia
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            El consenso entre usuarios es claro: MSI suele exprimir el hardware más que la media.
+            La marca tiende a permitir mayores consumos energéticos, lo que se traduce en mejores
+            resultados sostenidos en juegos y tareas exigentes.
+          </p>
 
-            <!-- Puntos Fuertes -->
-            <div class="p-8">
-              <h3 class="font-bold text-green-700 flex items-center gap-2 mb-4">
-                <Icon name="tabler:circle-check" class="w-5 h-5" />
-                Lo Mejor
-              </h3>
-              <ul class="space-y-3 text-sm text-gray-700">
-                <li class="flex gap-2">
-                  <span class="text-green-500 font-bold">+</span>
-                  Rendimiento sin limitar voltaje (TGP alto).
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-green-500 font-bold">+</span>
-                  Refrigeración superior en carga máxima.
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-green-500 font-bold">+</span>
-                  Pantallas de alta tasa de refresco (Hz).
-                </li>
-              </ul>
-            </div>
-
-            <!-- Puntos Débiles -->
-            <div class="p-8">
-              <h3 class="font-bold text-red-700 flex items-center gap-2 mb-4">
-                <Icon name="tabler:alert-circle" class="w-5 h-5" />
-                Lo Peor
-              </h3>
-              <ul class="space-y-3 text-sm text-gray-700">
-                <li class="flex gap-2">
-                  <span class="text-red-500 font-bold">-</span>
-                  Plásticos y bisagras frágiles en gama media.
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-red-500 font-bold">-</span>
-                  Ruido de ventiladores muy elevado.
-                </li>
-                <li class="flex gap-2">
-                  <span class="text-red-500 font-bold">-</span>
-                  Software de control (MSI Center) inestable.
-                </li>
-              </ul>
-            </div>
+          <div class="mt-6 bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <h3 class="font-semibold text-gray-900 mb-2">
+              Dato clave: TGP (Total Graphics Power)
+            </h3>
+            <p class="text-sm text-gray-600">
+              Muchos usuarios valoran que MSI configure las GPU con TGP más altos que otras marcas,
+              obteniendo más rendimiento real con el mismo chip gráfico.
+            </p>
           </div>
-        </div>
+        </section>
       </ScrollReveal>
-    </section>
 
-    <!-- 3️⃣ CONTEXTO DE MARCA -->
-    <section class="mb-16 max-w-3xl">
       <ScrollReveal client:load delay={0.2}>
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Contexto: ¿Qué es un portátil MSI hoy?</h2>
-        <div class="prose prose-lg text-gray-600">
-          <p>
-            A diferencia de marcas generalistas como HP o Dell, MSI (Micro-Star International) diseña sus portátiles con una única obsesión: <strong>el silicio</strong>. Su filosofía es priorizar la CPU y la GPU sobre el chasis.
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Refrigeración, temperaturas y ruido
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            El precio de la potencia es el calor. Las opiniones coinciden en que los sistemas de
+            refrigeración de MSI son eficaces, pero ruidosos. En cargas altas, los ventiladores
+            alcanzan niveles sonoros elevados que pueden resultar molestos fuera de un entorno gaming.
           </p>
-          <p>
-            Esto significa que, por el mismo precio, un MSI suele tener "mejores tripas" que la competencia, pero a menudo envuelto en un cuerpo menos sofisticado. Es la marca por excelencia para quienes buscan <em>frames por segundo</em> por euro invertido, abarcando desde máquinas de entrada (series Cyborg/Thin) hasta estaciones de batalla de 4.000€ (series Titan/Raider).
-          </p>
-        </div>
+        </section>
       </ScrollReveal>
-    </section>
 
-    <hr class="border-gray-100 mb-16" />
+      <ScrollReveal client:load delay={0.3}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Construcción y durabilidad
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            La durabilidad es el aspecto más controvertido en las opiniones sobre portátiles MSI.
+            Especialmente en gamas medias, se mencionan problemas de flexión del chasis y debilidad
+            en las bisagras, aunque la marca ha introducido mejoras en modelos recientes.
+          </p>
+        </section>
+      </ScrollReveal>
 
-    <!-- 4️⃣ ANÁLISIS POR EJES (CORE) -->
-    <div class="space-y-16">
-      
-      <!-- Eje 1: Rendimiento -->
-      <section class="grid md:grid-cols-12 gap-8 items-start">
-        <div class="md:col-span-4">
-          <div class="sticky top-24">
-            <span class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-4">
-              <Icon name="tabler:cpu" class="w-6 h-6" />
-            </span>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Rendimiento y Potencia</h2>
-            <p class="text-sm text-gray-500">El principal argumento de compra.</p>
+      <ScrollReveal client:load delay={0.4}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Pantalla, teclado y experiencia diaria
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            Las pantallas destacan por su alta tasa de refresco, mientras que la calidad de color
+            varía mucho según la gama. Los teclados, especialmente los desarrollados junto a
+            SteelSeries, reciben valoraciones positivas de forma consistente.
+          </p>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.5}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Servicio técnico y garantía
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            La experiencia postventa es irregular. Muchos usuarios recomiendan comprar portátiles
+            MSI a través de distribuidores que gestionen directamente la garantía, ya que el trato
+            con el servicio técnico oficial recibe críticas por tiempos de reparación y cobertura.
+          </p>
+        </section>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.6}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Comparación percibida frente a otras marcas
+          </h2>
+          <ul class="list-disc pl-6 text-gray-600 max-w-3xl space-y-2">
+            <li>Frente a ASUS: mejor rendimiento bruto, peor construcción en gamas medias.</li>
+            <li>Frente a Lenovo Legion: menos robustez, más potencia por euro.</li>
+            <li>Frente a HP Omen: diseño más agresivo, mayor ruido bajo carga.</li>
+          </ul>
+        </section>
+      </ScrollReveal>
+
+      <!-- BLOQUE PRÁCTICO -->
+      <ScrollReveal client:load delay={0.7}>
+        <section class="bg-blue-50 border border-blue-100 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-blue-900 mb-4">
+            Dónde informarse y comparar precios
+          </h2>
+          <p class="text-blue-800 mb-6 max-w-3xl">
+            MSI lanza múltiples configuraciones con diferencias mínimas. Es fundamental comprobar
+            siempre el modelo exacto y sus especificaciones antes de comparar precios.
+          </p>
+
+          <a
+            href="https://www.msi.com/Laptops"
+            target="_blank"
+            rel="nofollow noopener"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+          >
+            <Icon name="tabler:device-laptop" class="w-5 h-5" />
+            Web oficial de MSI
+          </a>
+        </section>
+      </ScrollReveal>
+
+      <!-- UGC -->
+      <ScrollReveal client:load delay={0.8}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Opiniones de usuarios
+          </h2>
+          <div class="bg-gray-100 border border-gray-200 rounded-xl p-6 text-center">
+            <p class="text-gray-500">
+              Estamos recopilando y verificando opiniones reales de usuarios sobre portátiles MSI.
+              Este apartado se ampliará progresivamente.
+            </p>
           </div>
-        </div>
-        <div class="md:col-span-8 prose text-gray-600">
-          <p>
-            Aquí es donde las opiniones sobre MSI son casi unánimes: <strong>son bestias de carga</strong>. La marca tiene la reputación de no limitar el consumo energético (TGP) de sus tarjetas gráficas tanto como la competencia.
-          </p>
-          <p>
-            Mientras un ultrabook puede limitar una RTX 4060 a 70W para no calentarse, MSI suele permitirle llegar a 105W o más. Esto se traduce en un rendimiento real superior en juegos y renderizado 3D. Si tu prioridad es que el trabajo salga rápido, MSI cumple.
-          </p>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
 
-      <!-- Eje 2: Refrigeración -->
-      <section class="grid md:grid-cols-12 gap-8 items-start">
-        <div class="md:col-span-4">
-          <div class="sticky top-24">
-            <span class="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-4">
-              <Icon name="tabler:wind" class="w-6 h-6" />
-            </span>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Temperaturas y Ruido</h2>
-            <p class="text-sm text-gray-500">La física no perdona.</p>
-          </div>
-        </div>
-        <div class="md:col-span-8 prose text-gray-600">
-          <p>
-            La potencia genera calor, y MSI lo combate con fuerza bruta. Su sistema <em>Cooler Boost</em> es muy efectivo moviendo aire, pero las opiniones coinciden: <strong>parecen un avión despegando</strong>.
+      <!-- CONCLUSIÓN -->
+      <ScrollReveal client:load delay={0.9}>
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">
+            Conclusión
+          </h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl">
+            MSI es una marca adecuada para usuarios que priorizan el rendimiento por encima del
+            silencio, la autonomía o la portabilidad. Sus portátiles destacan por potencia, pero
+            exigen aceptar ciertos compromisos en ruido y construcción, especialmente en gamas medias.
           </p>
-          <p>
-            El ruido en carga máxima es notablemente más alto que en marcas como ASUS o Lenovo. Además, en los modelos de chasis delgado (series Thin/Stealth), el teclado suele calentarse en la zona central, algo que muchos usuarios reportan como incómodo tras sesiones largas.
-          </p>
-        </div>
-      </section>
-
-      <!-- Eje 3: Construcción -->
-      <section class="grid md:grid-cols-12 gap-8 items-start">
-        <div class="md:col-span-4">
-          <div class="sticky top-24">
-            <span class="w-12 h-12 rounded-lg bg-gray-100 text-gray-600 flex items-center justify-center mb-4">
-              <Icon name="tabler:hammer" class="w-6 h-6" />
-            </span>
-            <h2 class="text-2xl font-bold text-gray-900 mb-2">Construcción y Durabilidad</h2>
-            <p class="text-sm text-gray-500">El punto crítico.</p>
-          </div>
-        </div>
-        <div class="md:col-span-8 prose text-gray-600">
-          <p>
-            El talón de Aquiles histórico de MSI son las <strong>bisagras y los plásticos</strong>. Aunque han mejorado en los modelos post-2023, los foros siguen llenos de usuarios con chasis fracturados cerca de la pantalla, especialmente en las gamas de entrada (GF/GL).
-          </p>
-          <p>
-            La sensación de robustez varía enormemente: un MSI Raider (gama alta) se siente como un tanque, mientras que un MSI Katana (gama media) puede crujir al manipularlo. Es vital no esperar acabados de MacBook en un MSI de 900€.
-          </p>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- 5️⃣ SERVICIO TÉCNICO (RISK BLOCK) -->
-    <section class="my-16 bg-yellow-50 border border-yellow-200 rounded-2xl p-8">
-      <div class="flex gap-4 items-start">
-        <Icon name="tabler:lifebuoy" class="w-8 h-8 text-yellow-700 flex-shrink-0" />
-        <div>
-          <h2 class="text-xl font-bold text-yellow-900 mb-2">El factor "Servicio Técnico"</h2>
-          <p class="text-yellow-800 text-sm leading-relaxed mb-4">
-            Las opiniones sobre el soporte oficial de MSI en España y Latam son mixtas. El proceso de RMA (garantía) directo con el fabricante suele ser descrito como lento y estricto respecto a "daños físicos" (como las bisagras).
-          </p>
-          <p class="text-yellow-800 text-sm font-medium">
-            <strong>Consejo editorial:</strong> Adquiere siempre tu equipo a través de un distribuidor con buen soporte propio (tipo Amazon o PcComponentes) para tener una primera capa de protección al cliente.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6️⃣ COMPARACIÓN CONTEXTUAL -->
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">MSI frente a la competencia</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="text-sm font-bold text-gray-400 mb-2">VS ASUS (ROG/TUF)</div>
-          <h3 class="font-bold text-lg mb-3">La batalla del diseño</h3>
-          <p class="text-sm text-gray-600">
-            ASUS suele ganar en estética, calidad de pantalla y duración de batería. MSI suele ganar en rendimiento bruto a igualdad de precio.
-          </p>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="text-sm font-bold text-gray-400 mb-2">VS Lenovo (Legion)</div>
-          <h3 class="font-bold text-lg mb-3">La batalla de la robustez</h3>
-          <p class="text-sm text-gray-600">
-            Lenovo Legion es actualmente el referente en construcción sólida. Un MSI equivalente se sentirá más "plástico", pero quizás te ofrezca una GPU superior.
-          </p>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="text-sm font-bold text-gray-400 mb-2">VS HP (Omen/Victus)</div>
-          <h3 class="font-bold text-lg mb-3">La batalla del equilibrio</h3>
-          <p class="text-sm text-gray-600">
-            HP busca un punto medio más discreto (sirven para trabajar). MSI es estética gamer sin complejos: luces, ventilación y agresividad.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 7️⃣ BLOQUE PRÁCTICO (INFO) -->
-    <section class="mb-16 bg-gray-900 rounded-2xl p-8 text-white text-center">
-      <h2 class="text-2xl font-bold mb-4">¿Dónde informarse mejor?</h2>
-      <p class="text-gray-400 mb-8 max-w-xl mx-auto">
-        MSI tiene cientos de variantes de modelos. Antes de comprar, verifica el código exacto del producto en su web para no confundir paneles o gráficas.
-      </p>
-      
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://www.msi.com/Laptops" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-black rounded-lg hover:bg-gray-100 transition-colors font-bold">
-          <Icon name="tabler:external-link" class="w-5 h-5" />
-          Catálogo Oficial MSI
-        </a>
-      </div>
-      <p class="text-xs text-gray-500 mt-6">
-        *Nota: Opiniones Electrónicas no vende productos. Recomendamos contrastar precios en varios distribuidores.
-      </p>
-    </section>
-
-    <!-- 8️⃣ UGC PLACEHOLDER -->
-    <section class="mb-16 border-t border-gray-100 pt-12">
-      <h2 class="text-2xl font-bold text-gray-900 mb-6">Opiniones de la comunidad</h2>
-      <div class="bg-gray-50 border border-dashed border-gray-300 rounded-xl p-12 text-center">
-        <Icon name="tabler:messages" class="w-10 h-10 text-gray-300 mx-auto mb-4" />
-        <p class="text-gray-500 font-medium">Estamos verificando nuevas opiniones de propietarios de MSI (2024-2025).</p>
-        <p class="text-sm text-gray-400 mt-2">Próximamente publicaremos experiencias reales de uso a largo plazo.</p>
-      </div>
-    </section>
-
-    <!-- 9️⃣ CONCLUSIÓN EDITORIAL -->
-    <section>
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">Veredicto Final</h2>
-      <div class="prose prose-lg text-gray-600">
-        <p>
-          MSI no engaña a nadie: vende <strong>rendimiento</strong>. Si tu prioridad absoluta es que tus juegos o renders vuelen, y estás dispuesto a aceptar un equipo más ruidoso y con acabados funcionales (que no lujosos), es una marca fantástica. Su electrónica es de primer nivel.
-        </p>
-        <p>
-          Sin embargo, si buscas un portátil para "vivir con él" (llevarlo a la universidad, usarlo en el sofá, valorar el silencio y el tacto premium), es probable que las gamas medias de MSI te frustren a largo plazo. Compra MSI por lo que lleva dentro, no por lo que lleva fuera.
-        </p>
-      </div>
-    </section>
-
+        </section>
+      </ScrollReveal>
+    </article>
   </main>
 </Layout>
