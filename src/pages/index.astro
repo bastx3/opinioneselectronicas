@@ -1,0 +1,254 @@
+---
+// src/pages/index.astro
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MOCK DATA (Datos simulados para prototipar sin backend todavía)
+// ─────────────────────────────────────────────────────────────────────────────
+
+const topCategories = [
+  { name: "Smartphones", icon: "tabler:device-mobile", count: "120+ marcas" },
+  { name: "Laptops", icon: "tabler:device-laptop", count: "85+ marcas" },
+  { name: "Televisores", icon: "tabler:device-tv", count: "40+ marcas" },
+  { name: "Audio", icon: "tabler:headphones", count: "200+ marcas" },
+  { name: "Hogar", icon: "tabler:smart-home", count: "150+ marcas" },
+  { name: "Gaming", icon: "tabler:device-gamepad", count: "60+ marcas" },
+];
+
+const trendingBrands = [
+  { name: "Samsung", score: 4.2, reviews: 1240, slug: "samsung" },
+  { name: "Sony", score: 4.5, reviews: 890, slug: "sony" },
+  { name: "Xiaomi", score: 3.8, reviews: 2100, slug: "xiaomi" },
+  { name: "LG", score: 4.1, reviews: 750, slug: "lg" },
+  { name: "Apple", score: 4.7, reviews: 3400, slug: "apple" },
+  { name: "Hisense", score: 3.5, reviews: 420, slug: "hisense" },
+  { name: "Dyson", score: 4.6, reviews: 310, slug: "dyson" },
+  { name: "Logitech", score: 4.4, reviews: 560, slug: "logitech" },
+];
+
+const recentReviews = [
+  {
+    brand: "Samsung",
+    user: "Carlos M.",
+    rating: 2,
+    title: "Buen hardware, pésimo soporte",
+    text: "La tele se ve increíble, pero el sistema operativo va lento tras 6 meses y el servicio técnico no responde.",
+    time: "hace 2 horas",
+  },
+  {
+    brand: "Sony",
+    user: "Ana R.",
+    rating: 5,
+    title: "Calidad de sonido inigualable",
+    text: "Compré los WH-1000XM5 y son otro mundo. La cancelación de ruido vale cada euro.",
+    time: "hace 5 horas",
+  },
+  {
+    brand: "Cecotec",
+    user: "Javi88",
+    rating: 1,
+    title: "Se rompió a la semana",
+    text: "El robot aspirador dejó de cargar. Plástico barato. No recomiendo esta marca para nada.",
+    time: "hace 1 día",
+  },
+];
+---
+
+<Layout
+  title="Opiniones Reales de Electrónica | TechReview"
+  description="Descubre qué tal es esa marca antes de comprar. Opiniones honestas, sin filtros y directas sobre tecnología y electrodomésticos."
+>
+  <!-- HEADER SIMPLE (Integrado aquí para evitar dependencias externas por ahora) -->
+  <header class="w-full py-4 px-4 border-b border-gray-200 bg-white sticky top-0 z-50">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-tight text-black flex items-center gap-2">
+        <Icon name="tabler:message-circle-2-filled" class="w-6 h-6" />
+        TechReview
+      </a>
+      <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+        <a href="#categorias" class="hover:text-black transition-colors">Categorías</a>
+        <a href="#marcas" class="hover:text-black transition-colors">Marcas Populares</a>
+        <a href="#recientes" class="hover:text-black transition-colors">Últimas Opiniones</a>
+      </div>
+      <a href="/login" class="px-4 py-2 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">
+        Escribir Opinión
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: Buscador y Propuesta de Valor -->
+    <section class="bg-black text-white py-20 px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-8">
+        <div class="space-y-4">
+          <span class="inline-block py-1 px-3 rounded-full bg-gray-800 text-gray-300 text-xs font-medium tracking-wide uppercase border border-gray-700">
+            Base de datos 2024
+          </span>
+          <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
+            ¿Es buena esa marca?<br />
+            <span class="text-gray-400">Averígualo antes de pagar.</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            Opiniones sin censura sobre marcas de electrónica. Desde el servicio técnico hasta la durabilidad real.
+          </p>
+        </div>
+
+        <!-- Buscador Principal -->
+        <div class="max-w-xl mx-auto relative group">
+          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Icon name="tabler:search" class="w-5 h-5 text-gray-400 group-focus-within:text-black transition-colors" />
+          </div>
+          <input
+            type="text"
+            placeholder="Busca una marca (ej. Samsung, Cecotec, LG...)"
+            class="w-full pl-11 pr-4 py-4 rounded-xl text-gray-900 bg-white border-2 border-transparent focus:border-gray-500 focus:outline-none focus:ring-0 shadow-xl transition-all text-lg placeholder:text-gray-400"
+          />
+        </div>
+
+        <div class="pt-4 flex justify-center gap-6 text-sm text-gray-500">
+          <span class="flex items-center gap-1"><Icon name="tabler:check" class="w-4 h-4 text-green-500" /> 100% Anónimo</span>
+          <span class="flex items-center gap-1"><Icon name="tabler:check" class="w-4 h-4 text-green-500" /> Sin Influencers</span>
+          <span class="flex items-center gap-1"><Icon name="tabler:check" class="w-4 h-4 text-green-500" /> Datos Reales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: CATEGORÍAS -->
+    <section id="categorias" class="py-16 px-4 bg-gray-50 border-b border-gray-200">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">Explora por categoría</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {topCategories.map((cat) => (
+            <a href={`/categoria/${cat.name.toLowerCase()}`} class="group bg-white p-4 rounded-xl border border-gray-200 hover:border-black hover:shadow-md transition-all text-center">
+              <div class="w-10 h-10 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 group-hover:bg-black group-hover:text-white transition-colors">
+                <Icon name={cat.icon} class="w-5 h-5" />
+              </div>
+              <h3 class="font-medium text-gray-900">{cat.name}</h3>
+              <p class="text-xs text-gray-500 mt-1">{cat.count}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: MARCAS POPULARES -->
+    <section id="marcas" class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-8">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Marcas más buscadas</h2>
+            <p class="text-gray-600 mt-2">Las que generan más debate esta semana.</p>
+          </div>
+          <a href="/marcas" class="text-sm font-semibold underline decoration-2 underline-offset-4 hover:text-gray-600">Ver todas &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {trendingBrands.map((brand) => (
+            <a href={`/marca/${brand.slug}`} class="block group relative bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+              <div class="flex justify-between items-start mb-4">
+                <div class="w-12 h-12 bg-gray-900 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+                  {brand.name.charAt(0)}
+                </div>
+                <div class={`px-2 py-1 rounded text-xs font-bold ${brand.score >= 4 ? 'bg-green-100 text-green-800' : brand.score >= 3 ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'}`}>
+                  {brand.score}/5
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-1 group-hover:underline decoration-2 underline-offset-2">{brand.name}</h3>
+              <p class="text-sm text-gray-500">{brand.reviews} opiniones registradas</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: ÚLTIMAS OPINIONES (Feed) -->
+    <section id="recientes" class="py-16 px-4 bg-gray-50 border-t border-gray-200">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Lo último que se dice</h2>
+        
+        <div class="grid md:grid-cols-3 gap-6">
+          {recentReviews.map((review) => (
+            <article class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm flex flex-col h-full">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-gray-100 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-gray-600">
+                  {review.brand}
+                </div>
+                <div class="flex text-yellow-400">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Icon name={i < review.rating ? "tabler:star-filled" : "tabler:star"} class="w-4 h-4" />
+                  ))}
+                </div>
+              </div>
+              
+              <h3 class="font-bold text-lg mb-2 leading-tight">"{review.title}"</h3>
+              <p class="text-gray-600 text-sm mb-6 flex-grow">
+                {review.text}
+              </p>
+              
+              <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                <span class="font-medium text-gray-900">{review.user}</span>
+                <span>{review.time}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="/recientes" class="inline-block px-8 py-3 border border-black text-black font-medium rounded-lg hover:bg-black hover:text-white transition-colors">
+            Leer más opiniones
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO & CTA FINAL -->
+    <section class="py-20 px-4 bg-white border-t border-gray-200">
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        <Icon name="tabler:shield-check" class="w-16 h-16 mx-auto text-gray-900" />
+        <h2 class="text-3xl font-bold text-gray-900">¿Por qué confiar en nosotros?</h2>
+        <p class="text-lg text-gray-600">
+          Internet está lleno de reviews compradas e influencers patrocinados. 
+          Aquí solo encontrarás experiencias de usuarios reales que han pagado por sus productos.
+          Si una marca falla en el servicio post-venta, aquí es donde te enterarás.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="bg-black text-white py-12 px-4 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div class="col-span-2">
+        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+          <Icon name="tabler:message-circle-2-filled" class="w-6 h-6" />
+          TechReview
+        </h3>
+        <p class="text-gray-400 max-w-sm">
+          La plataforma independiente de opiniones sobre electrónica de consumo. 
+          Ayudando a comprar mejor desde 2024.
+        </p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Navegación</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#" class="hover:text-white">Inicio</a></li>
+          <li><a href="#" class="hover:text-white">Marcas</a></li>
+          <li><a href="#" class="hover:text-white">Categorías</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Legal</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="#" class="hover:text-white">Privacidad</a></li>
+          <li><a href="#" class="hover:text-white">Términos</a></li>
+          <li><a href="#" class="hover:text-white">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+      &copy; {new Date().getFullYear()} TechReview. Todos los derechos reservados.
+    </div>
+  </footer>
+</Layout>
