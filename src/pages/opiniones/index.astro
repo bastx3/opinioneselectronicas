@@ -1,0 +1,235 @@
+---
+// src/pages/marcas/msi.astro
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import ScrollReveal from "../../components/ScrollReveal";
+
+// Metadatos SEO específicos para esta página
+const title = "Opiniones sobre MSI: Reputación y Análisis de Marca | Opiniones Electrónicas";
+const description = "Análisis en profundidad sobre la reputación de MSI. ¿Es buena marca? Valoraciones de usuarios sobre portátiles, componentes y servicio técnico.";
+---
+
+<Layout title={title} description={description}>
+  <!-- BREADCRUMBS -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-4xl mx-auto px-4 py-3 text-sm text-gray-500 flex items-center gap-2">
+      <a href="/" class="hover:text-black">Inicio</a>
+      <Icon name="tabler:chevron-right" class="w-3 h-3" />
+      <span class="text-gray-900 font-medium">MSI</span>
+    </div>
+  </div>
+
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <!-- CABECERA DE MARCA -->
+    <div class="mb-12 border-b border-gray-100 pb-8">
+      <div class="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between mb-6">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
+            Opiniones sobre MSI: reputación de la marca y valoración general
+          </h1>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Un análisis crítico sobre el gigante taiwanés del dragón rojo. Desglosamos la realidad detrás del marketing gaming, la fiabilidad de sus componentes y las experiencias reales de sus usuarios.
+          </p>
+        </div>
+        <!-- Logo Placeholder / Score Badge -->
+        <div class="flex-shrink-0 bg-black text-white p-6 rounded-xl text-center min-w-[120px]">
+          <span class="block text-4xl font-bold">7.8</span>
+          <span class="text-xs uppercase tracking-wider text-gray-400">Puntuación<br>Usuarios</span>
+        </div>
+      </div>
+      
+      <!-- Resumen rápido (Pros/Cons visuales) -->
+      <div class="grid md:grid-cols-2 gap-4 text-sm">
+        <div class="bg-green-50 p-4 rounded-lg border border-green-100">
+          <span class="font-bold text-green-800 block mb-2">Lo mejor</span>
+          <ul class="space-y-1 text-green-700">
+            <li class="flex gap-2"><Icon name="tabler:check" class="w-4 h-4 mt-0.5" /> Rendimiento bruto en gama alta</li>
+            <li class="flex gap-2"><Icon name="tabler:check" class="w-4 h-4 mt-0.5" /> Ecosistema de componentes líder</li>
+            <li class="flex gap-2"><Icon name="tabler:check" class="w-4 h-4 mt-0.5" /> Innovación en refrigeración</li>
+          </ul>
+        </div>
+        <div class="bg-red-50 p-4 rounded-lg border border-red-100">
+          <span class="font-bold text-red-800 block mb-2">A mejorar</span>
+          <ul class="space-y-1 text-red-700">
+            <li class="flex gap-2"><Icon name="tabler:x" class="w-4 h-4 mt-0.5" /> Calidad de plásticos en gama baja</li>
+            <li class="flex gap-2"><Icon name="tabler:x" class="w-4 h-4 mt-0.5" /> Bloatware (Software preinstalado)</li>
+            <li class="flex gap-2"><Icon name="tabler:x" class="w-4 h-4 mt-0.5" /> Servicio técnico inconsistente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENIDO EDITORIAL -->
+    <article class="prose prose-lg prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-black hover:prose-a:underline max-w-none">
+      
+      <ScrollReveal client:load>
+        <h2>Introducción</h2>
+        <p>
+          Micro-Star International, conocida mundialmente como <strong>MSI</strong>, es una de las marcas más omnipresentes en el sector de la informática de consumo. Aunque sus raíces están en la fabricación de placas base y tarjetas gráficas —donde ostenta una posición de liderazgo indiscutible—, en la última década ha transformado su identidad para convertirse en sinónimo de "Gaming".
+        </p>
+        <p>
+          Esta transición ha generado una base de usuarios masiva, pero también opiniones extremadamente polarizadas. Para muchos, MSI representa el equilibrio perfecto entre estética agresiva y rendimiento puntero. Para otros, especialmente aquellos que han tenido que lidiar con sus gamas de entrada o su servicio de soporte, la experiencia dista mucho de ser premium.
+        </p>
+        <p>
+          En este análisis, nos alejamos de las especificaciones técnicas puras para centrarnos en la <strong>percepción de marca</strong>, la fiabilidad a largo plazo reportada por las comunidades tecnológicas y la realidad de convivir con productos del dragón rojo.
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.1}>
+        <h2>Visión general de la marca MSI</h2>
+        <p>
+          Fundada en Taiwán en 1986, MSI comenzó como un fabricante de componentes OEM. A diferencia de marcas como Apple o Dell, que se centran en la experiencia integral y el soporte empresarial, el ADN de MSI es puramente <strong>entusiasta</strong>. Su posicionamiento actual busca dominar el nicho de los jugadores de videojuegos (gamers) y, más recientemente, el de los creadores de contenido.
+        </p>
+        <p>
+          La imagen que proyecta es de agresividad tecnológica: frecuencias altas, sistemas de refrigeración sobredimensionados y mucha iluminación RGB. Sin embargo, es crucial entender que MSI opera en un espectro muy amplio. No es lo mismo hablar de su línea <em>Titan</em> (portátiles de más de 4.000€) que de su línea <em>Thin</em> o componentes <em>Ventus</em>, donde los recortes en materiales son evidentes para ajustar el precio.
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.2}>
+        <h2>Valoración global de MSI según los usuarios</h2>
+        <div class="not-prose my-8 bg-gray-100 p-6 rounded-xl border border-gray-200">
+          <div class="flex items-center gap-4">
+            <div class="bg-black text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center">
+              7.8
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900 m-0">Nota Orientativa</h4>
+              <p class="text-sm text-gray-600 m-0">Basada en agregación de foros y reseñas técnicas</p>
+            </div>
+          </div>
+        </div>
+        <p>
+          Si tuviéramos que asignar una nota numérica a la reputación global de MSI basada en el sentimiento de las redes, esta rondaría el <strong>7.5 o 8 sobre 10</strong>. Esta calificación, aunque notable, esconde matices importantes.
+        </p>
+        <p>
+          La percepción general es que MSI ofrece un <strong>hardware interno excelente</strong> envuelto en chasis o materiales que no siempre están a la altura, salvo en sus topes de gama. Los usuarios avanzados suelen valorar muy positivamente la capacidad de la marca para exprimir el rendimiento del silicio (CPU y GPU), a menudo superando a competidores más conservadores en benchmarks. Sin embargo, la nota baja considerablemente cuando se evalúa la experiencia post-venta y la durabilidad física de elementos externos (bisagras, plásticos, ventiladores) a partir del segundo año de uso.
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.3}>
+        <h2>Principales puntos fuertes que destacan los usuarios</h2>
+        
+        <h3>Rendimiento sin restricciones</h3>
+        <p>
+          Una constante en las opiniones sobre MSI es la potencia. La marca no suele limitar el voltaje (TGP) de sus tarjetas gráficas en portátiles tanto como otras marcas más enfocadas en la delgadez. Esto se traduce en que, a igualdad de especificaciones sobre el papel, un equipo MSI suele rendir ligeramente mejor en juegos.
+        </p>
+
+        <h3>Innovación en refrigeración</h3>
+        <p>
+          Las tecnologías térmicas de MSI (denominadas comercialmente como <em>Twin Frozr</em>, <em>Torx Fan</em> o <em>Cooler Boost</em>) gozan de una excelente reputación. En el mercado de componentes de PC, sus disipadores para tarjetas gráficas suelen ser considerados el estándar de oro en cuanto a equilibrio entre temperatura y ruido.
+        </p>
+
+        <h3>Relación prestaciones/precio en gama media</h3>
+        <p>
+          En segmentos como las placas base (series B650/Z790 Tomahawk) y portátiles de gama media-alta (series Katana o Pulse), los usuarios suelen encontrar que MSI ofrece mejores especificaciones técnicas por euro invertido que marcas "premium" como Razer o Asus ROG, aunque sea a costa de sacrificar acabados premium.
+        </p>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.4}>
+        <h2>Críticas y problemas recurrentes</h2>
+
+        <h3>El "talón de Aquiles": Las bisagras y plásticos</h3>
+        <p>
+          No se puede hablar de opiniones sobre MSI sin mencionar el problema más reportado históricamente en sus portátiles: las bisagras. Una búsqueda rápida en foros como Reddit revela numerosos casos de usuarios con chasis fracturados cerca de la unión de la pantalla, especialmente en modelos de hace unos años o de gamas de entrada (serie GF/GL). Aunque la marca ha mejorado los diseños recientes, la reputación de fragilidad estructural persiste.
+        </p>
+
+        <h3>Software propietario (MSI Center)</h3>
+        <p>
+          Mientras que el hardware es alabado, el software es frecuentemente criticado. Las suites de control como <em>Dragon Center</em> o el más moderno <em>MSI Center</em> son descritas habitualmente por la comunidad como "bloatware" (software inflado), propenso a errores, consumos innecesarios de recursos en segundo plano y conflictos con actualizaciones de Windows.
+        </p>
+
+        <h3>Servicio técnico (RMA)</h3>
+        <p>
+          La experiencia con el soporte técnico varía drásticamente según la región. En Europa, las opiniones son mixtas. Mientras que el proceso de garantía a través de grandes distribuidores (como Amazon o PcComponentes) suele ser fluido, el trato directo con el fabricante para tramitar RMAs (Devolución de Mercancía Autorizada) acumula quejas sobre tiempos de espera largos o diagnósticos que atribuyen fallos de fábrica a "mal uso" del cliente.
+        </p>
+      </ScrollReveal>
+
+      <hr class="my-12 border-gray-200" />
+
+      <ScrollReveal client:load delay={0.5}>
+        <h2>Diferencias de percepción según el tipo de producto</h2>
+        
+        <p>
+          MSI no es igual de buena en todo lo que fabrica. La satisfacción del usuario cambia radicalmente dependiendo de qué estés comprando:
+        </p>
+
+        <ul class="list-none pl-0 space-y-6">
+          <li class="pl-4 border-l-4 border-black">
+            <strong>Componentes de PC (Placas base y GPU):</strong> <br/>
+            Aquí MSI es la realeza. Sus series <em>Suprim</em> y <em>Gaming X</em> son veneradas por entusiastas. La tasa de fallo reportada es baja y la calidad de construcción es percibida como muy alta. Es, probablemente, la división más prestigiosa de la marca.
+          </li>
+          <li class="pl-4 border-l-4 border-gray-300">
+            <strong>Portátiles:</strong> <br/>
+            Opiniones mixtas. Los modelos de gama alta (Raider, Titan) son bestias de rendimiento muy queridas. Los modelos económicos (Thin, Cyborg) reciben críticas por sus pantallas de baja calidad cromática y chasis de plástico flexible.
+          </li>
+          <li class="pl-4 border-l-4 border-gray-300">
+            <strong>Monitores y Periféricos:</strong> <br/>
+            Un mercado más reciente para la marca. Sus monitores suelen usar paneles de calidad (a menudo fabricados por Samsung), pero el control de calidad en cuanto a píxeles muertos o fugas de luz (bleeding) parece ser menos riguroso que en marcas especializadas como Dell o BenQ.
+          </li>
+        </ul>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.6}>
+        <h2>¿Para qué tipo de usuario se recomienda MSI?</h2>
+        <p>
+          Basándonos en el análisis de miles de comentarios y la trayectoria de la marca, MSI es una opción ideal para:
+        </p>
+        <ul>
+          <li><strong>El Gamer puro:</strong> Que prioriza los FPS (cuadros por segundo) y la refrigeración sobre la portabilidad o la elegancia minimalista.</li>
+          <li><strong>El entusiasta del PC (PC Master Race):</strong> Usuarios que saben configurar curvas de ventilación, hacer <em>undervolt</em> y no dependen del soporte técnico oficial para resolver problemas de drivers.</li>
+          <li><strong>Presupuestos ajustados con altas pretensiones:</strong> Usuarios que necesitan una tarjeta gráfica potente (ej. serie RTX 4060/4070) pero no pueden pagar el sobrecoste de marcas premium.</li>
+        </ul>
+        <p>
+          Por contra, <strong>no suele ser la marca recomendada para entornos corporativos</strong>, usuarios que viajan constantemente y necesitan robustez militar (donde Lenovo ThinkPad destaca) o creativos que requieren pantallas con calibración de color perfecta de fábrica y servicio técnico in-situ.
+        </p>
+      </ScrollReveal>
+
+      <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 my-12 not-prose">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">Información Oficial y Dónde Comparar</h2>
+        <p class="text-gray-600 mb-6">
+          Para especificaciones técnicas exactas y descargas de drivers, siempre recomendamos acudir a la fuente oficial. Para precios, las grandes plataformas suelen tener mejores ofertas que la tienda directa.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://www.msi.com" target="_blank" rel="nofollow noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors font-medium">
+            <Icon name="tabler:world" class="w-5 h-5" />
+            Web Oficial de MSI
+          </a>
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+            Ver ofertas en Amazon
+          </a>
+        </div>
+        <p class="text-xs text-gray-400 mt-4">
+          *Nota: La disponibilidad de stock de MSI suele fluctuar mucho debido a la alta demanda de sus componentes gráficos.
+        </p>
+      </div>
+
+      <ScrollReveal client:load delay={0.7}>
+        <h2>Análisis específicos relacionados</h2>
+        <p>
+          Si estás considerando comprar un producto MSI, te recomendamos profundizar en nuestras guías específicas por categoría, donde detallamos modelos concretos:
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 not-prose">
+          <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-black transition-colors group">
+            <h3 class="font-bold text-lg mb-1 group-hover:underline">Opiniones Portátiles MSI</h3>
+            <p class="text-sm text-gray-600">Análisis de las series Raider, Vector, Katana y Thin.</p>
+          </a>
+          <a href="#" class="block p-4 border border-gray-200 rounded-lg hover:border-black transition-colors group">
+            <h3 class="font-bold text-lg mb-1 group-hover:underline">Componentes MSI</h3>
+            <p class="text-sm text-gray-600">Placas base y gráficas: ¿Vale la pena pagar el extra?</p>
+          </a>
+        </div>
+      </ScrollReveal>
+
+      <ScrollReveal client:load delay={0.8}>
+        <h2>Conclusión</h2>
+        <p>
+          MSI es una marca de contrastes. Es capaz de fabricar el mejor hardware del mundo en componentes internos, y al mismo tiempo descuidar aspectos básicos de usabilidad en su software o chasis de gama baja. Su reputación es sólida porque <strong>cumplen lo que prometen: rendimiento</strong>.
+        </p>
+        <p>
+          Si eres consciente de lo que compras —una máquina potente que quizás requiera algo de cuidado y conocimientos técnicos—, MSI raramente decepciona. Si buscas una experiencia "sacar de la caja y olvidar" con soporte premium, quizás debas mirar otras alternativas. En el ecosistema gaming actual, el dragón rojo sigue siendo, con sus luces y sombras, un rey difícil de destronar.
+        </p>
+      </ScrollReveal>
+
+    </article>
+  </main>
+</Layout>
